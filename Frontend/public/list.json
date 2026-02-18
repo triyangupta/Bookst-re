@@ -1,0 +1,98 @@
+[
+    {
+        "id": 1,
+        "name": "Sport Book",
+        "title": "Contrary to popular belief, Lorem Ipsum is not simply random text.",
+        "price": 0,
+        "category": "Free",
+        "image": "https://img.freepik.com/free-vector/books-stack-realistic_1284-4735.jpg?t=st=1771062609~exp=1771066209~hmac=b52d5a587261e688a43fe64b3f723af2ea812186afa5089d90b28845132e7853&w=1480"
+    },
+    {
+        "id": 2,
+        "name": "Comedy Book",
+        "title": "Contrary to popular belief, Lorem Ipsum is not simply random text.",
+        "price": 0,
+        "category": "Free",
+        "image": "https://img.freepik.com/free-vector/books-stack-realistic_1284-4735.jpg?t=st=1771062609~exp=1771066209~hmac=b52d5a587261e688a43fe64b3f723af2ea812186afa5089d90b28845132e7853&w=1480"
+    },
+    {
+        "id": 3,
+        "name": "Story Book",
+        "title": "Contrary to popular belief, Lorem Ipsum is not simply random text.",
+        "price": 120,
+        "category": "Sports",
+        "image": "https://img.freepik.com/free-vector/books-stack-realistic_1284-4735.jpg?t=st=1771062609~exp=1771066209~hmac=b52d5a587261e688a43fe64b3f723af2ea812186afa5089d90b28845132e7853&w=1480"
+    },
+    {
+        "id": 4,
+        "name": "Sport Book",
+        "title": "Contrary to popular belief, Lorem Ipsum is not simply random text.",
+        "price": 90,
+        "category": "Sports",
+        "image": "https://img.freepik.com/free-vector/books-stack-realistic_1284-4735.jpg?t=st=1771062609~exp=1771066209~hmac=b52d5a587261e688a43fe64b3f723af2ea812186afa5089d90b28845132e7853&w=1480"
+    },
+    {
+        "id": 5,
+        "name": "Music Book",
+        "title": "Contrary to popular belief, Lorem Ipsum is not simply random text.",
+        "price": 0,
+        "category": "Free",
+        "image": "https://img.freepik.com/free-vector/books-stack-realistic_1284-4735.jpg?t=st=1771062609~exp=1771066209~hmac=b52d5a587261e688a43fe64b3f723af2ea812186afa5089d90b28845132e7853&w=1480"
+    },
+    {
+        "id": 6,
+        "name": "Story Book",
+        "title": "Contrary to popular belief, Lorem Ipsum is not simply random text.",
+        "price": 0,
+        "category": "Free",
+        "image": "https://img.freepik.com/free-vector/books-stack-realistic_1284-4735.jpg?t=st=1771062609~exp=1771066209~hmac=b52d5a587261e688a43fe64b3f723af2ea812186afa5089d90b28845132e7853&w=1480"
+    },
+    {
+        "id": 7,
+        "name": "Food Book",
+        "title": "Contrary to popular belief, Lorem Ipsum is not simply random text.",
+        "price": 100,
+        "category": "Food",
+        "image": "https://img.freepik.com/free-vector/books-stack-realistic_1284-4735.jpg?t=st=1771062609~exp=1771066209~hmac=b52d5a587261e688a43fe64b3f723af2ea812186afa5089d90b28845132e7853&w=1480"
+    },
+    {
+        "id": 8,
+        "name": "Comedy Book",
+        "title": "Contrary to popular belief, Lorem Ipsum is not simply random text.",
+        "price": 0,
+        "category": "Free",
+        "image": "https://img.freepik.com/free-vector/books-stack-realistic_1284-4735.jpg?t=st=1771062609~exp=1771066209~hmac=b52d5a587261e688a43fe64b3f723af2ea812186afa5089d90b28845132e7853&w=1480"
+    },
+    {
+        "id": 9,
+        "name": "Music Book",
+        "title": "Contrary to popular belief, Lorem Ipsum is not simply random text.",
+        "price": 10,
+        "category": "Music",
+        "image": "https://img.freepik.com/free-vector/books-stack-realistic_1284-4735.jpg?t=st=1771062609~exp=1771066209~hmac=b52d5a587261e688a43fe64b3f723af2ea812186afa5089d90b28845132e7853&w=1480"
+    },
+    {
+        "id": 10,
+        "name": "Food Book",
+        "title": "Contrary to popular belief, Lorem Ipsum is not simply random text.",
+        "price": 150,
+        "category": "Food",
+        "image": "https://img.freepik.com/free-vector/books-stack-realistic_1284-4735.jpg?t=st=1771062609~exp=1771066209~hmac=b52d5a587261e688a43fe64b3f723af2ea812186afa5089d90b28845132e7853&w=1480"
+    },
+     {
+        "id": 11,
+        "name": "Sport Book",
+        "title": "Contrary to popular belief, Lorem Ipsum is not simply random text.",
+        "price": 0,
+        "category": "Free",
+        "image": "https://img.freepik.com/free-vector/books-stack-realistic_1284-4735.jpg?t=st=1771062609~exp=1771066209~hmac=b52d5a587261e688a43fe64b3f723af2ea812186afa5089d90b28845132e7853&w=1480"
+    },
+      {
+        "id": 12,
+        "name": "Food Book",
+        "title": "Contrary to popular belief, Lorem Ipsum is not simply random text.",
+        "price": 150,
+        "category": "Food",
+        "image": "https://img.freepik.com/free-vector/books-stack-realistic_1284-4735.jpg?t=st=1771062609~exp=1771066209~hmac=b52d5a587261e688a43fe64b3f723af2ea812186afa5089d90b28845132e7853&w=1480"
+    }
+]
