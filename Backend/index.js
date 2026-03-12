@@ -1,14 +1,25 @@
 import express from "express"
 import dotenv from 'dotenv'
-const app=express();
+import mongoose from "mongoose";
+const app = express();
 
 dotenv.config();
 
-const PORT=process.env.port || 4000
+const PORT = process.env.port || 4000
 
-app.get("/",(req,res)=>{
-    res.send("helrfvlo")
-})
-app.listen(PORT,()=>{
-    console.log(`Server listen on port ${PORT}`);
-});
+const Url = process.env.mongoDBUrl;
+
+const connectToDb = async () => {
+    try {
+        await mongoose.connect(Url)
+        console.log("connected to mongoDB")
+
+        app.listen(PORT, () => {
+            console.log(`Server listen on port ${PORT}`);
+        });
+    }
+    catch (error) {
+        console.log("Database connection error:", error);
+    }
+}
+connectToDb()
