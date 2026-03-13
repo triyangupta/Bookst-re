@@ -1,19 +1,21 @@
 import User from "../model/user_model.js";
+import bcryptjs from "bcryptjs"
 
-export const signup=(req,res)=>{
+export const signup = async (req, res) => {
     try {
-        const {fullname,email,password}=req.body;
-        const user=User.findOne({email})
-        if(user){
-            return res.status(400).json({message:"User already exist"})
+        const { fullname, email, password } = req.body;
+        const user = await User.findOne({ email })
+        if (user) {
+            return res.status(400).json({ message: "User already exist" })
         }
-        const createUser=new User({
-            fullname,
-            email,
-            password,
+        const hashPassword= await bcryptjs.hash(password,10)
+        const createUser = new User({
+            fullname: fullname,
+            email: email,
+            password: hashPassword,
         })
-        createUser.save()
-        res.status(201).json({message:"User created successfully"})
+        await createUser.save()
+        res.status(201).json({ message: "User created successfully" })
     } catch (error) {
         console.log(error)
         res.status(500).json(error)
