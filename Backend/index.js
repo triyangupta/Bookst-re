@@ -3,6 +3,8 @@ import dotenv from 'dotenv'
 import mongoose from "mongoose";
 const app = express();
 
+import bookRoute from "./route/book_route.js"
+
 dotenv.config();
 
 const PORT = process.env.port || 4000
@@ -23,4 +25,6 @@ const connectToDb = async () => {
         process.exit(1);
     }
 }
-connectToDb()
+connectToDb();
+
+app.use("/book",bookRoute)
