@@ -15,7 +15,12 @@ export const signup = async (req, res) => {
             password: hashPassword,
         })
         await createUser.save()
-        res.status(201).json({ message: "User created successfully" })
+        res.status(201).json({ message: "User created successfully",user:{
+            _id:createUser._id,
+            fullname:createUser.fullname,
+            email:createUser.email,
+        } 
+    })
     } catch (error) {
         console.log(error)
         res.status(500).json(error)
@@ -38,7 +43,8 @@ export const login=async(req,res)=>{
                 _id:user._id,
                 fullname:user.fullname,
                 email:user.email,
-            }})
+            }
+        })
         }
     } catch (error) {
         console.log(error);
