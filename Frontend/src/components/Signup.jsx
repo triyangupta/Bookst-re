@@ -2,17 +2,35 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Eye, EyeOff } from 'lucide-react'
 import { useForm } from "react-hook-form"
+import axios from 'axios'
+import toast from 'react-hot-toast'
 
 const Signup = () => {
     const [showPassword, setShowPassword] = useState(false)
     const {
-            register,
-            handleSubmit,
-            formState: { errors },
-        } = useForm()
-    
-        const onSubmit = (data) => console.log(data)
+        register,
+        handleSubmit,
+        formState: { errors },
+    } = useForm()
 
+    const onSubmit = async (data) => {
+        const userInfo = {
+            fullname: data.fullname,
+            email: data.email,
+            password: data.password
+        }
+        await axios.post("http://localhost:3000/user/signup", userInfo)
+            .then((res) => {
+                if (res.data) {
+                    toast.success('Signup successfull!');
+                }
+                localStorage.setItem("Users", JSON.stringify(res.data.user))
+            }).catch((error) => {
+                if (error.response) {
+                    toast.error(error.response.data.message);
+                }
+            })
+    }
     return (
         <div className="min-h-screen flex items-center justify-center  from-pink-100 via-white to-pink-200 px-4">
             <div className=" w-full max-w-md bg-white/80 backdrop-blur-lg btn-ghost rounded-2xl shadow-2xl p-8 relative">
@@ -32,9 +50,9 @@ const Signup = () => {
                                 type="name"
                                 placeholder="Enter your name"
                                 className="mt-1 w-full border border-pink-400 rounded-lg h-12 px-3 outline-none focus:ring-2 focus:ring-pink-500 focus:border-pink-500 transition"
-                                 {...register("name", { required: true })}
+                                {...register("fullname", { required: true })}
                             />
-                            {errors.name && <span className='text-red-700'>This field is required*</span>}
+                            {errors.fullname && <span className='text-red-700'>This field is required*</span>}
 
                         </div>
                         <div>
@@ -43,9 +61,9 @@ const Signup = () => {
                                 type="email"
                                 placeholder="Enter your email"
                                 className="mt-1 w-full border border-pink-400 rounded-lg h-12 px-3 outline-none focus:ring-2 focus:ring-pink-500 focus:border-pink-500 transition"
-                                 {...register("email", { required: true })}
-                                />
-                                 {errors.email && <span className='text-red-700'>This field is required*</span>}
+                                {...register("email", { required: true })}
+                            />
+                            {errors.email && <span className='text-red-700'>This field is required*</span>}
 
                         </div>
 
