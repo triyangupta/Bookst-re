@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Login from "./Login";
 import Logout from "./Logout";
-import {useAuth} from "../context/AuthProvider.jsx"
+import { useAuth } from "../context/AuthProvider.jsx"
 
 const Navbar = () => {
 
@@ -26,7 +26,7 @@ const Navbar = () => {
       <li><a className="font-medium hover:text-primary transition" href="/">Home</a></li>
       <li><a className="font-medium hover:text-primary transition" href="/course">Course</a></li>
       <li><a className="font-medium hover:text-primary transition" href="/contact">Contact</a></li>
-      <li><a className="font-medium hover:text-primary transition" href="/about">About</a></li>
+      <li><a className="font-medium hover:text-primary transition" href="/">About</a></li>
     </>
   );
 
