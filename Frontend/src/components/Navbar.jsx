@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Login from "./Login";
-
+import Login from "./Login"; 
 const Navbar = () => {
 
 
