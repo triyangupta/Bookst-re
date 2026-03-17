@@ -4,9 +4,13 @@ import { Eye, EyeOff } from 'lucide-react'
 import { useForm } from "react-hook-form"
 import axios from 'axios'
 import toast from 'react-hot-toast'
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthProvider";
 
 const Signup = () => {
     const [showPassword, setShowPassword] = useState(false)
+    const navigate = useNavigate();
+    const [, setAuthUser] = useAuth();
     const {
         register,
         handleSubmit,
@@ -23,11 +27,15 @@ const Signup = () => {
             .then((res) => {
                 if (res.data) {
                     toast.success('Signup successfull!');
+                    setAuthUser(res.data.user);
+                    localStorage.setItem("Users", JSON.stringify(res.data.user));
+                    navigate("/");
                 }
-                localStorage.setItem("Users", JSON.stringify(res.data.user))
             }).catch((error) => {
                 if (error.response) {
                     toast.error(error.response.data.message);
+                } else {
+                    toast.error("Something went wrong");
                 }
             })
     }

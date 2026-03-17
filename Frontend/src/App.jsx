@@ -5,13 +5,11 @@ import { Navigate, Route, Routes } from 'react-router-dom'
 import Courses from './course/Courses'
 import Signup from './components/Signup'
 import Contact from './components/Contact'
-import toast, { Toaster } from 'react-hot-toast'
+import { Toaster } from 'react-hot-toast'
 import { useAuth } from './context/AuthProvider'
 
 const App = () => {
-
   const [authUser, setAuthUser] = useAuth()
-  console.log(authUser)
   return (
     <div>
       <Routes>

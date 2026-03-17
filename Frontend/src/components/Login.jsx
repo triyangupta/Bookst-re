@@ -4,9 +4,11 @@ import { Link } from 'react-router-dom'
 import { useForm } from "react-hook-form"
 import axios from 'axios'
 import toast from 'react-hot-toast'
+import { useAuth } from '../context/AuthProvider'
 
 const Login = () => {
     const [showPassword, setShowPassword] = useState(false)
+    const [, setAuthUser] = useAuth();
     const {
         register,
         handleSubmit,
@@ -22,8 +24,10 @@ const Login = () => {
             .then((res) => {
                 if (res.data) {
                     toast.success('Login successfull!');
+                    setAuthUser(res.data.user);
+                    localStorage.setItem("Users", JSON.stringify(res.data.user));
+                    document.getElementById("my_modal_5")?.close();
                 }
-                localStorage.setItem("Users", JSON.stringify(res.data.user))
             })
             .catch((error) => {
                 if (error.response) {
